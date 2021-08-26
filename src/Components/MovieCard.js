@@ -2,6 +2,7 @@ import React from 'react'
 import { Card , ListGroup,ListGroupItem} from 'react-bootstrap'
 import ReactStars from "react-rating-stars-component";
 import {Navbar , Nav , NavDropdown , Container} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 const MovieCard = ({movies}) => {
     return (
@@ -10,7 +11,7 @@ const MovieCard = ({movies}) => {
 <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={movies.img} />
   <Card.Body>
-    <Card.Title>{movies.title}</Card.Title>
+    <Card.Title><Link to={`/${movies.title}`}>{movies.title}</Link></Card.Title>
     <Card.Subtitle></Card.Subtitle>
     <ReactStars
     count={5}
